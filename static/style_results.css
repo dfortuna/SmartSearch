@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Raleway&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.add-image {
+    flex: 5;
+    background-image: url("imageTest.png");
+    background-size: cover;
+}
+
+.label {
+    font-family: Raleway;
+    padding-left: 1em;
+    text-align: left;
+    font-size: 80%;
+    color: #585858;  
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.advertising {
+    flex: 1;
+    display: flex;
+}
+.job-results {
+    flex: 1;
+    display: flex;
+}
+
+.left-column {
+    flex: 1;
+}
+.right-column {
+    flex: 1;
+}
+.ad-image {
+    flex: 5;
+    align-self: center;
+    overflow: hidden; 
+    max-height: 10em;    
+}
+
+.results {
+    flex:5;
+    display: flex;
+    flex-direction: column;
+    border-top: 1.5px solid lightgrey;
+    border-right: .5px solid lightgrey;
+    border-left: .5px solid lightgrey;
+    padding-top: 1em;
+}
+
+.line1 {
+    flex: 1;
+    display: flex;
+    padding-top: .5em;
+}
+.line1-job-title {
+    flex: 3;
+    font-family: Raleway;
+    font-weight: bold;
+    padding-left: .5em;
+}
+.line1-job-location {
+    flex: 1;
+    text-align: end;
+}
+
+.line2 {
+    flex: 2;
+    display: flex;
+    height: 60px;
+    align-content: center;
+}
+.line2-job-description {
+    flex: 3;
+    font-size: 80%;
+    padding-left: .5em;
+    padding-bottom: .2em;
+    font-family: Raleway;
+    line-height: 15px;
+    height: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.line2-job-desc-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}   
+.line2-job-desc-col-date {
+    flex: 1;
+    
+}
+.line2-job-desc-col-employer {
+    flex: 1;
+    padding-top: 0.5em;
+}
+
+.line3{
+    flex: 1;
+    display: flex;
+    padding-left: .5em;
+    flex-direction: row;
+    border-bottom: 1.5px solid lightgrey;
+    justify-content: flex-start;
+    align-content: flex-end;
+}
+.line3-job-other-info {
+    flex: content;
+    font-size: 60%;
+    font-family: Raleway;
+    color: #585858;  
+    padding-right: 1em;
+}
+
+

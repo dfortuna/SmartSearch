@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/static/style_results.css"/>
+        <title>Results</title>
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="advertising">
+                <div class="left-column"> </div>
+
+                <div class="ad-image">    
+                    <img src="imageTest.png" alt="Advertising">
+                </div>        
+                
+                <div class="right-column"> </div>
+            </div>
+        
+             <div class="job-results">
+                <div class="left-column"> </div>
+        
+                <div class="results">
+                    {% for position in positions %}
+                        <div class="line1">
+                            <div class="line1-job-title">
+                                <a href={{position.url}} target ="_blank">{{ position.title }}</a>
+                                
+                            </div>
+                            <div class="line1-job-location">
+                                <div class="label">{{ position.location }}</div>
+                            </div>    
+                        </div>
+                        <div class="line2">
+                            <div class="line2-job-description">
+                                <div class="">{{ position.description }}</div>
+                            </div>
+                            
+                            <div class="line2-job-desc-column">
+                                <div class="line2-job-desc-col-date">
+                                    <div class="label">{{ position.posted }}</div>
+                                </div>
+                                <div class="line2-job-desc-col-employer">
+                                    <div class="label">{{ position.source }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line3">
+                            {% for attribute in position.attributes %}
+                            <div class="line3-job-other-info">
+                                {{attribute}}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="right-column"> </div>
+            </div>            
+        </div>        
+    </body>
+</html>

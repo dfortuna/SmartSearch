@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+    color: #777;
+}
+
+html, body, footer {
+    margin: 0;
+    padding: 0;
+}
+
+.header-appearence{
+    display: flex;
+    align-content: flex-start;
+}
+
+.logo-left {
+    flex: 1;
+}
+.logo-right {
+    flex: 1;
+}
+.logo-center {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+}
+
+.main-name{
+    flex: 3;
+    font-family: Raleway;
+    font-size: 500%;
+    color: rgba(0, 0, 0, .6);
+    align-self: center;
+    padding-top: 8%;    
+}
+
+.name-description{
+    flex: 1;
+    display: flex;
+}
+
+.name-description-left{
+    flex: 1;
+}
+.name-description-right{
+    flex: 1;
+}
+.name-description-center{
+    flex: 4;
+    font-family: Indie Flower;
+    font-size: 200%;
+    margin-top: -5%;
+    color: blue;   
+    text-align: end;
+}
+
+
+/* Find Jobs btn  BODY/Main **************** */
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.find-jobs-btn {
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(51, 110, 255);
+    color: white;
+}
+
+.find-jobs-btn:hover {
+    background-color: rgba(51, 110, 255, .8);
+}
+
+/* FLEXBOX  BODY/Main **************** */
+
+.main {
+    display: flex;
+}
+
+.left {
+    flex: 1;
+}
+.right {
+    flex: 1
+}
+.form-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-bottom {
+    flex: 1;
+    align-self: center;
+    padding: .5em;
+}
+.form-top{
+    flex: 3;
+    display: flex;
+    margin: .3em;
+    flex-direction: column;
+}
+
+.form-top-row {
+    flex: 1;
+    display: flex;
+}
+
+.label {
+    flex: 1;
+    padding: .5em;
+    text-align: end;
+    font-size: 100%;
+    font-family: Raleway;
+}
+.input {
+    flex: 3;
+    display: flex;
+    font-size: 100%;
+    font-family: Raleway;
+    align-items: center;
+}
+
+input {
+    width: 90%;
+    height: 20px;
+}
+
+select {
+    width: 70%;
+    font-size: 100%;
+}
+
+.choice-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.choice-label {
+    flex: 9;
+    font-size: 14px;   
+    padding-right: 1em; 
+}
+.checkbox{
+    flex: 1;
+}
+
+/* FLEXBOX  Footer **************** */
+
+.footer-container {
+    display: flex;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+
+.footer-left {
+    flex: 1;
+}
+.footer-right {
+    flex: 1;
+}
+.footer-middle {
+    flex: 4;
+    display: flex;
+}
+
+.footer-component {
+    flex: 1;
+    text-decoration: none;
+    color: darkgray;
+    text-align: center;
+    padding-bottom: 3%;
+    padding-top: 1%;
+    border-top: 1px solid lightgrey;
+}

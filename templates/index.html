@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>Smart Search</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Highly customized job search. Look for jobs on Gumtree, Seek and Indeed at the same time">
+        <meta name="keywords" content="Job,Jobs,Gumtree,Indeed,Seek">
+        <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+    </head>
+    <body>
+        <section class="header-appearence">
+                <div class="logo-left"> </div>
+
+                <div class="logo-center"> 
+                    <div class="main-name">
+                            Smart Search
+                    </div>
+                    <div class="name-description">
+                        <div class="name-description-left"> </div>
+                        <div class="name-description-center"> Jobs </div>
+                        <div class="name-description-right"> </div>
+                    </div>
+                </div>
+ 
+                <div class="logo-right"> </div>
+            
+        </section>
+        <section class="main">
+            <div class="left"> </div>
+
+            <form action="/find-Jobs" method="post" class="form-container" target ="_blank">
+                <div class="form-top">
+                    <div class="form-top-row">
+                        <div class="label">Search for:</div>
+                        <div class="input">
+                            <input type="text" name="search-for" placeholder="Separate keywords with commas &quot;&comma;&quot;">
+                        </div>
+                    </div>
+                    <div class="form-top-row">
+                        <div class="label">Avoiding:</div>
+                        <div class="input">
+                            <input type="text" name="avoiding" placeholder="Separate keywords with commas &quot;&comma;&quot;">
+                        </div>
+                    </div>
+                    <div class="form-top-row">
+                        <div class="label">Location:</div>
+                        <div class="input">
+                            <select name="location">
+                                {% for city in cities %}
+                                <option> {{city}} </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-top-row">
+                        <div class="label">Job Type:</div>
+                        <div class="input">
+                            <div class="choice-container">
+                                <input type="checkbox" class="checkbox" name="fulltime">
+                                <span class="choice-label">Full&hyphen;time</span>
+                            </div>
+                            <div class="choice-container">
+                                <input type="checkbox" class="checkbox" name="parttime">
+                                <span class="choice-label">Part&hyphen;time</span>
+                            </div>
+                            <div class="choice-container">
+                                    <input type="checkbox" class="checkbox" name="casual">
+                                    <span class="choice-label">Casual</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-top-row">
+                        <div class="label">Search on:</div>
+                        <div class="input">
+                            <div class="choice-container">
+                                <input type="checkbox" class="checkbox" name="gumtree" value="1">
+                                <span class="choice-label">Gumtree</span>
+                            </div>  
+                            <div class="choice-container">
+                                <input type="checkbox" class="checkbox" name="indeed" value="1">
+                                <span class="choice-label">Indeed</span>
+                            </div>
+                            <div class="choice-container">
+                                    <input type="checkbox" class="checkbox" name="seek" value="1">
+                                    <span class="choice-label">Jora</span>
+                            </div>              
+                        </div>
+                    </div>
+                </div>
+                <div class="form-bottom">
+                    <button class="btn find-jobs-btn" type="submit">Find Jobs!</button>
+                </div>
+            </form>   
+
+            <div class="right"> </div>
+        </section>
+    </body>
+
+    <footer class="footer-container"> 
+        <div class="footer-left"> </div>
+        
+        <div class="footer-middle">
+            <div class="footer-component"> 2019 BlaBla </div>
+            <a href="mailto: smart.search.contact@gmail.com" class="footer-component"> Contact </a> 
+            <a href="/help" target ="_blank" class="footer-component"> Help </a> 
+        </div>
+
+        <div class="footer-right"> </div>
+    </footer>
+</html>
